@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      th, td {
+        padding: 8px;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>All Laptops</title>
+  </head>
+  <body>
+    <h1>All Laptops</h1>
+    <table class="table table-bordered" border="2" id="table">
+      <thead>
+        <tr>
+          <th>S no.</th>
+          <th>Make</th>
+          <th>City</th>
+          <th>Model</th>
+          <th>Tag ID</th>
+          <th>Serial Number</th>
+          <th>Processor</th>
+          <th>Generation</th>
+          <th>OS</th>
+          <th>OS Key</th>
+          <th>Hostname</th>
+          <th>RAM</th>
+          <th>Storage</th>
+          <th>Graphics</th>
+          <th>User</th>
+          <th>Status</th>
+          <th>Remarks</th>
+          <th>Updated By</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% let counter = 1; %>
+        <% LaptopData.forEach((Laptop) => { %>
+        <tr>
+          <td><%= counter %></td>
+          <td><%= Laptop.Make %></td>
+          <td><%= Laptop.City %></td>
+          <td><%= Laptop.Model %></td>
+          <td><%= Laptop.TagID %></td>
+          <td><%= Laptop.SerialNumber %></td>
+          <td><%= Laptop.Processor %></td>
+          <td><%= Laptop.Generation %></td>
+          <td><%= Laptop.os %></td>
+          <td><%= Laptop.OSKey %></td>
+          <td><%= Laptop.Hostname %></td>
+          <td><%= Laptop.RAM %></td>
+          <td><%= Laptop.Storage %></td>
+          <td><%= Laptop.Graphics %></td>
+          <td><%= Laptop.User %></td>
+          <td><%= Laptop.Status %></td>
+          <td><%= Laptop.Remarks %></td>
+          <td><%= Laptop.Updatedby %></td>
+        </tr>
+        <% counter++; %>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      th, td {
+        padding: 8px;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>All Desktops</title>
+  </head>
+  <body>
+    <h1>All Desktops</h1>
+    <table class="table table-bordered" border="2" id="table">
+      <thead>
+        <tr>
+          <th>S no.</th>
+          <th>Make</th>
+          <th>City</th>
+          <th>Model</th>
+          <th>Tag ID</th>
+          <th>Serial Number</th>
+          <th>Processor</th>
+          <th>Generation</th>
+          <th>OS</th>
+          <th>OS Key</th>
+          <th>Hostname</th>
+          <th>RAM</th>
+          <th>Storage</th>
+          <th>Graphics</th>
+          <th>User</th>
+          <th>Status</th>
+          <th>Remarks</th>
+          <th>Updated By</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% let counter = 1; %>
+        <% desktopData.forEach((desktop) => { %>
+        <tr>
+          <td><%= counter %></td>
+          <td><%= desktop.Make %></td>
+          <td><%= desktop.City %></td>
+          <td><%= desktop.Model %></td>
+          <td><%= desktop.TagID %></td>
+          <td><%= desktop.SerialNumber %></td>
+          <td><%= desktop.Processor %></td>
+          <td><%= desktop.Generation %></td>
+          <td><%= desktop.os %></td>
+          <td><%= desktop.OSKey %></td>
+          <td><%= desktop.Hostname %></td>
+          <td><%= desktop.RAM %></td>
+          <td><%= desktop.Storage %></td>
+          <td><%= desktop.Graphics %></td>
+          <td><%= desktop.User %></td>
+          <td><%= desktop.Status %></td>
+          <td><%= desktop.Remarks %></td>
+          <td><%= desktop.Updatedby %></td>
+        </tr>
+        <% counter++; %>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>

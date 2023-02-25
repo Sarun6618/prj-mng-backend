@@ -1,0 +1,161 @@
+<html>
+	<head>
+        <title>Keyboard Portal</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <!--<link href="C:\Users\chsar\Documents\My Codes\Code\prj-mng-backend\view\bootstrap-5.3.0-alpha1\dist\css\bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		<script src="C:\Users\chsar\Documents\My Codes\Code\prj-mng-backend\view\bootstrap-5.3.0-alpha1\dist\js\bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>-->
+		<style>
+			table{
+				width: 50% !important;
+			}
+			li {
+			  float: left;
+			}
+			li a {
+			  display: block;
+			  padding: 8px;
+			}
+			.right li a{
+				text-align: end;
+			}
+		</style>
+    </head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+		<!--<a class="navbar-brand" href="#">
+			<img src="./assets/img/20180826_174255.jpg" alt="" width="75" height="75" class="d-inline-block align-text-top">
+		  </a>-->
+		<ul>
+			<li><a class="navbar-brand text-light nav-link d-flex flex-row-reverse" href="/home">HOME</a></li>
+			<li><a class="navbar-brand text-light nav-link" href="search.ejs">Search</a></li>
+			<li><a class="navbar-brand text-light nav-link" href="/Keyboard/export-Keyboards">Export</a></li>
+			<li><a class="navbar-brand text-light nav-link" href="/Keyboard/Keyboardfetch">fetch</a></li>
+			<!--<li><a class="nav-link scrollto" href="#about">About</a></li>
+			<li><a class="nav-link scrollto" href="#Education">Education</a></li>
+			<li><a class="nav-link scrollto " href="#Projects">Projects</a></li>
+			<li><a class="nav-link scrollto " href="#Contact">Contact</a></li>-->
+			<div class="btn-group">
+				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+					ITEMS
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="navbar-brand nav-link" href="desktop.ejs">Desktop</a></li>
+					<li><a class="navbar-brand nav-link" href="Laptop.ejs">Laptop</a></li>
+					<li><a class="navbar-brand nav-link" href="Tab.ejs">Tab/iPad/Mobile</a></li>
+					<li><a class="navbar-brand nav-link" href="Mouse.ejs">Mouse</a></li>
+					<li><a class="navbar-brand nav-link" href="Keyboard.ejs">Keyboard</a></li>
+					<li><a class="navbar-brand nav-link" href="Monitor.ejs">Monitor</a></li>
+					<li><a class="navbar-brand nav-link" href="Printer.ejs">Printer</a></li>
+				</ul>
+			  </div>
+			  <!--<ul>
+				<li><a href="#">Drop Down 1</a></li>
+				<li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+
+				</li>
+				<li><a href="#">Drop Down 2</a></li>
+				<li><a href="#">Drop Down 3</a></li>
+				<li><a href="#">Drop Down 4</a></li>
+			  </ul>
+			</li>
+		<ul>-->
+	</nav>
+<h1 style="text-align: center"> Keyboard AUDIT </h1>
+<form action="/Keyboard/register" method="POST">
+	<table class="table table-bordered" border=1 width="50%" height="600px" align="center" bgcolor="DodgerBlue">
+	 <tr>
+		<h1> <%= status %> </h1>
+	  <td>
+ 	   <label for="Make">Make:</label>
+	  </td>
+	  <td>
+  	   <select name="Make" id="Make">
+         <option value="Dell">Dell</option>
+         <option value="Lenovo">Lenovo</option>
+         <option value="Assembled">Assembled</option>
+         <option value="HP">HP</option>
+		 <option value="Logitech">Logitech</option>
+         </select>
+	   <br>
+	  </td>
+	 </tr>
+	 <tr>
+		<td>
+		 <label for="City">City:</label>
+		</td>
+		<td>
+		 <input type="text" id="City" name="City"> <br>
+		</td>
+	   </tr>
+	 <tr>
+	  <td>
+	   <label for="Model">Model:</label>
+	  </td>
+	  <td>
+	   <input type="text" id="Model" name="Model"> <br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="TagID">Tag ID:</label>
+	  </td>
+	  <td>
+	   <input type="text" id="TagID" name="TagID"> <br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="SerialNumber">Serial Number:</label>
+	  </td>
+	  <td>
+	   <input type="text" id="SerialNumber" name="SerialNumber"> <br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="User">User:</label>
+	  </td>
+	  <td>
+	   <input type="text" id="User" name="User"> <br><br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="Status">Status:</label><br>
+	  </td>
+	  <td>
+	   <input type="radio" id="Status" name="Status" value="Working">Working<br>
+	   <input type="radio" id="Status" name="Status" value="Not Working">Not Working<br><br>
+	  </td>
+	 </tr>
+	 <tr>
+	  <td>
+	   <label for="Remarks">Remarks:</label>
+	  </td>
+	  <td>
+	   <input type="text" id="Remarks" name="Remarks"> <br><br>
+	  </td>
+	 </tr>
+	 <tr>
+		<td>
+		 <label for="Updatedby">Updated by:</label>
+		</td>
+		<td>
+		 <input type="text" id="Updatedby" name="Updatedby"> <br>
+		</td>
+	   </tr>
+	 <tr>
+	  <td>
+	   <input type="submit" value="Submit" onclick="msg()">
+	  </td>
+	 </tr>
+	<table>
+</form>
+<script>
+function msg(){
+alert("Your response is submitted");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      th, td {
+        padding: 8px;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>All Mouse</title>
+  </head>
+  <body>
+    <h1>All Mouse</h1>
+    <table class="table table-bordered" border="2" id="table">
+      <thead>
+        <tr>
+          <th>S no.</th>
+          <th>Make</th>
+          <th>City</th>
+          <th>Model</th>
+          <th>Tag ID</th>
+          <th>Serial Number</th>
+          <th>User</th>
+          <th>Status</th>
+          <th>Remarks</th>
+          <th>Updated By</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% let counter = 1; %>
+        <% MouseData.forEach((Mouse) => { %>
+        <tr>
+          <td><%= counter %></td>
+          <td><%= Mouse.Make %></td>
+          <td><%= Mouse.City %></td>
+          <td><%= Mouse.Model %></td>
+          <td><%= Mouse.TagID %></td>
+          <td><%= Mouse.SerialNumber %></td>
+          <td><%= Mouse.User %></td>
+          <td><%= Mouse.Status %></td>
+          <td><%= Mouse.Remarks %></td>
+          <td><%= Mouse.Updatedby %></td>
+        </tr>
+        <% counter++; %>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>

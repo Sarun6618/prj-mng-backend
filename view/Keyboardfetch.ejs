@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      th, td {
+        padding: 8px;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>All Keyboards</title>
+  </head>
+  <body>
+    <h1>All Keyboards</h1>
+    <table class="table table-bordered" border="2" id="table">
+      <thead>
+        <tr>
+          <th>S no.</th>
+          <th>Make</th>
+          <th>City</th>
+          <th>Model</th>
+          <th>Tag ID</th>
+          <th>Serial Number</th>
+          <th>User</th>
+          <th>Status</th>
+          <th>Remarks</th>
+          <th>Updated By</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% let counter = 1; %>
+        <% KeyboardData.forEach((Keyboard) => { %>
+        <tr>
+          <td><%= counter %></td>
+          <td><%= Keyboard.Make %></td>
+          <td><%= Keyboard.City %></td>
+          <td><%= Keyboard.Model %></td>
+          <td><%= Keyboard.TagID %></td>
+          <td><%= Keyboard.SerialNumber %></td>
+          <td><%= Keyboard.User %></td>
+          <td><%= Keyboard.Status %></td>
+          <td><%= Keyboard.Remarks %></td>
+          <td><%= Keyboard.Updatedby %></td>
+        </tr>
+        <% counter++; %>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title>Desktop Portal</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <!--<link href="C:\Users\chsar\Documents\My Codes\Code\prj-mng-backend\view\bootstrap-5.3.0-alpha1\dist\css\bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		<script src="C:\Users\chsar\Documents\My Codes\Code\prj-mng-backend\view\bootstrap-5.3.0-alpha1\dist\js\bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>-->
+		<style>
+			li {
+			  float: left;
+			}
+			li a {
+			  display: block;
+			  padding: 8px;
+			}
+		</style>
+    </head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+		<!--<a class="navbar-brand" href="#">
+			<img src="./assets/img/20180826_174255.jpg" alt="" width="75" height="75" class="d-inline-block align-text-top">
+		  </a>-->
+		<ul>
+			<li><a class="navbar-brand text-light nav-link d-flex flex-row-reverse" href="/home">HOME</a></li>
+			<li><a class="navbar-brand text-light nav-link" href="search.ejs">Search</a></li>
+			<!--<li><a class="nav-link scrollto" href="#about">About</a></li>
+			<li><a class="nav-link scrollto" href="#Education">Education</a></li>
+			<li><a class="nav-link scrollto " href="#Projects">Projects</a></li>
+			<li><a class="nav-link scrollto " href="#Contact">Contact</a></li>-->
+			<div class="btn-group">
+				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+					ITEMS
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="navbar-brand nav-link" href="desktop.ejs">Desktop</a></li>
+					<li><a class="navbar-brand nav-link" href="Laptop.ejs">Laptop</a></li>
+					<li><a class="navbar-brand nav-link" href="Tab.ejs">Tab/iPad/Mobile</a></li>
+					<li><a class="navbar-brand nav-link" href="Mouse.ejs">Mouse</a></li>
+					<li><a class="navbar-brand nav-link" href="Keyboard.ejs">Keyboard</a></li>
+					<li><a class="navbar-brand nav-link" href="Monitor.ejs">Monitor</a></li>
+					<li><a class="navbar-brand nav-link" href="Printer.ejs">Printer</a></li>
+				</ul>
+			  </div>
+			  <!--<ul>
+				<li><a href="#">Drop Down 1</a></li>
+				<li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+
+				</li>
+				<li><a href="#">Drop Down 2</a></li>
+				<li><a href="#">Drop Down 3</a></li>
+				<li><a href="#">Drop Down 4</a></li>
+			  </ul>
+			</li>
+		<ul>-->
+	</nav>
+    <br><br><br>
+    <h3 style="text-align: center;">Welcome to the Express mongo connection Portal </h3>
+
+    <form action="/Desktop/fetch" method="POST">
+        <input type="text" placeholder="Search by Model" id="Model" name="Model"> <br><br>
+        <button type="submit">Fetch</button>
+    </form>
+    <br><br>
+    <form action="/Desktop/fetchSerialNumber" method="POST">
+      <input type="text" placeholder="Search by SerialNumber No" id="SerialNumber" name="SerialNumber"> <br><br>
+      <button type="submit">Fetch</button>
+  </form>
+  <br><br>
+
+    <%
+        if(view){
+    %>
+            <table class="table table-bordered" border="1" id="table">
+        <tr>
+            <th>S.no</th>
+            <th>Make</th>
+            <th>City</th>
+            <th>Hostname</th>
+            <th>Model</th>
+            <th>TagID</th>
+            <th>SerialNumber</th>
+            <th>Processor</th>
+            <th>Generation</th>
+            <th>os</th>
+            <th>RAM</th>
+            <th>Storage</th>
+            <th>Graphics</th>
+            <th>User</th>
+            <th>Status</th>
+            <th>Remarks</th>
+        </tr>
+
+        <%
+        if(stuData.length!=0){
+        var i=1;
+        stuData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=data.Make %></td>
+            <td><%=data.City %></td>
+            <td><%=data.Hostname %></td>
+            <td><%=data.Model %></td>
+            <td><%=data.TagID %></td>
+            <td><%=data.SerialNumber %></td>
+            <td><%=data.Processor %></td>
+            <td><%=data.Generation %></td>
+            <td><%=data.os %></td>
+            <td><%=data.RAM %></td>
+            <td><%=data.Storage %></td>
+            <td><%=data.Graphics %></td>
+            <td><%=data.User %></td>
+            <td><%=data.Status %></td>
+            <td><%=data.Remarks %></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="4">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      th, td {
+        padding: 8px;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>All Printers</title>
+  </head>
+  <body>
+    <h1>All Printers</h1>
+    <table class="table table-bordered" border="2" id="table">
+      <thead>
+        <tr>
+          <th>S no.</th>
+          <th>Make</th>
+          <th>City</th>
+          <th>Model</th>
+          <th>Printer/INKJET</th>
+          <th>Tag ID</th>
+          <th>Serial Number</th>
+          <th>User</th>
+          <th>Status</th>
+          <th>Remarks</th>
+          <th>Updated By</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% let counter = 1; %>
+        <% PrinterData.forEach((Printer) => { %>
+        <tr>
+          <td><%= counter %></td>
+          <td><%= Printer.Make %></td>
+          <td><%= Printer.City %></td>
+          <td><%= Printer.Model %></td>
+          <td><%= Printer.Desktop %></td>
+          <td><%= Printer.TagID %></td>
+          <td><%= Printer.SerialNumber %></td>
+          <td><%= Printer.User %></td>
+          <td><%= Printer.Status %></td>
+          <td><%= Printer.Remarks %></td>
+          <td><%= Printer.Updatedby %></td>
+        </tr>
+        <% counter++; %>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>

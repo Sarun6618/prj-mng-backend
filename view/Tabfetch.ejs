@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      th, td {
+        padding: 8px;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>All Tabs</title>
+  </head>
+  <body>
+    <h1>All Tabs</h1>
+    <table class="table table-bordered" border="2" id="table">
+      <thead>
+        <tr>
+          <th>S no.</th>
+          <th>Make</th>
+          <th>City</th>
+          <th>Model</th>
+          <th>Tag ID</th>
+          <th>Serial Number</th>
+          <th>User</th>
+          <th>Status</th>
+          <th>Remarks</th>
+          <th>Updated By</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% let counter = 1; %>
+        <% TabData.forEach((Tab) => { %>
+        <tr>
+          <td><%= counter %></td>
+          <td><%= Tab.Make %></td>
+          <td><%= Tab.City %></td>
+          <td><%= Tab.Model %></td>
+          <td><%= Tab.TagID %></td>
+          <td><%= Tab.SerialNumber %></td>
+          <td><%= Tab.User %></td>
+          <td><%= Tab.Status %></td>
+          <td><%= Tab.Remarks %></td>
+          <td><%= Tab.Updatedby %></td>
+        </tr>
+        <% counter++; %>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>

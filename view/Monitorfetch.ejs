@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      th, td {
+        padding: 8px;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>All Monitors</title>
+  </head>
+  <body>
+    <h1>All Monitors</h1>
+    <table class="table table-bordered" border="2" id="table">
+      <thead>
+        <tr>
+          <th>S no.</th>
+          <th>Make</th>
+          <th>City</th>
+          <th>Model</th>
+          <th>Tag ID</th>
+          <th>Serial Number</th>
+          <th>User</th>
+          <th>Status</th>
+          <th>Remarks</th>
+          <th>Updated By</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% let counter = 1; %>
+        <% MonitorData.forEach((Monitor) => { %>
+        <tr>
+          <td><%= counter %></td>
+          <td><%= Monitor.Make %></td>
+          <td><%= Monitor.City %></td>
+          <td><%= Monitor.Model %></td>
+          <td><%= Monitor.TagID %></td>
+          <td><%= Monitor.SerialNumber %></td>
+          <td><%= Monitor.User %></td>
+          <td><%= Monitor.Status %></td>
+          <td><%= Monitor.Remarks %></td>
+          <td><%= Monitor.Updatedby %></td>
+        </tr>
+        <% counter++; %>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>
