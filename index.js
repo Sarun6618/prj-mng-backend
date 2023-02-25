@@ -13,7 +13,8 @@ app.use(express.urlencoded({
 app.set('views', path.join(__dirname, 'view'))
 app.set('view engine','ejs')
 // mongodb://127.0.0.1:27017/AssetsData
-const dbURI='mongodb+srv://Sarun0904:Sarun0904@cluster0.oetdspm.mongodb.net/Assetsdata?retryWrites=true&w=majority';
+const dbURI='mongodb://127.0.0.1:27017/AssetsData';
+// const dbURI='mongodb+srv://Sarun0904:Sarun0904@cluster0.oetdspm.mongodb.net/Assetsdata?retryWrites=true&w=majority';
 mongoose.connect(dbURI,{useNewUrlParser: true,/*useCreateIndex:true*/useUnifiedTopology: true,/*useFindAndModify:false*/})
 .then(function(result){
     console.log("Database is connected");
