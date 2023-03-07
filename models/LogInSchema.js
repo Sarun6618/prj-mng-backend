@@ -3,7 +3,8 @@ const Schema=mongoose.Schema;
 const LogInSchema=new Schema({
     Username:{
         type:String,
-        required:true
+        required:true,
+        unique:true
     },
     Password:{
         type:String,

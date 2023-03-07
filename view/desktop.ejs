@@ -42,7 +42,7 @@ input.right {
 		  </a>-->
 		<ul>
 			<li><a class="navbar-brand text-light nav-link d-flex flex-row-reverse" href="/home">HOME</a></li>
-			<li><a class="navbar-brand text-light nav-link" href="search">Search</a></li>
+			<!-- <li><a class="navbar-brand text-light nav-link" href="search">Search</a></li> -->
 			<li><a class="navbar-brand text-light nav-link" href="/Desktop/export-Desktops">Export</a></li>
 			<li><a class="navbar-brand text-light nav-link" href="/Desktop/Desktopfetch">fetch</a></li>
 			<!--<li><a class="nav-link scrollto" href="#about">About</a></li>
@@ -84,7 +84,7 @@ input.right {
  	   <label for="Make">Make:</label>
 	  </td>
 	  <td>
-  	   <select class="form-control" name="Make" id="Make" style="width: 50%;">
+  	   <select name="Make" id="Make" style="width: 50%;">
          <option value="Dell">Dell</option>
          <option value="Lenovo">Lenovo</option>
          <option value="Assembled">Assembled</option>
@@ -99,7 +99,7 @@ input.right {
 		 <label for="City">City:</label>
 		</td>
 		<td>
-		 <input class="form-control" type="text" id="City" name="City" style="width: 50%;"> <br>
+		 <input type="text" id="City" name="City" style="width: 50%;"> <br>
 		</td>
 	   </tr>
 	 <tr>
@@ -107,7 +107,7 @@ input.right {
 	   <label for="Model">Model:</label>
 	  </td>
 	  <td>
-	   <input class="form-control" type="text" id="Model" name="Model" style="width: 50%;"> <br>
+	   <input type="text" id="Model" name="Model" style="width: 50%;"> <br>
 	  </td>
 	 </tr>
 	 <tr>
@@ -115,7 +115,7 @@ input.right {
 	   <label for="TagID">Tag ID:</label>
 	  </td>
 	  <td>
-	   <input class="form-control" type="text" id="TagID" name="TagID" style="width: 50%;"> <br>
+	   <input type="text" id="TagID" name="TagID" style="width: 50%;"> <br>
 	  </td>
 	 </tr>
 	 <tr>
@@ -123,7 +123,7 @@ input.right {
 	   <label for="SerialNumber">Serial Number:</label>
 	  </td>
 	  <td>
-	   <input class="form-control" type="text" id="SerialNumber" name="SerialNumber" style="width: 50%;"> <br>
+	   <input type="text" id="SerialNumber" name="SerialNumber" style="width: 50%;"> <br>
 	  </td>
 	 </tr>
 	 <tr>
@@ -137,7 +137,7 @@ input.right {
 	   <input type="radio" name="Processor" id="Processor" value="Core i9">Core i9<br>
 	   <input type="radio" name="Processor" id="Processor" value="Dual Core">Dual Core<br>
 	   <input type="radio" name="Processor" id="Processor" value="AMD Ryzen" >AMD Ryzen<br>
-	   <input class="rd" type="radio" name="Processor" id="Processor" value="Other"><input class="form-control" type="text" placeholder="Other" style="width: 50%;" ><br>
+	   <input class="rd" type="radio" name="Processor" id="Processor"><input type="text" placeholder="Other" style="width: 50%;" ><br>
 	  </td>
 	 </tr>
 	 <tr>
@@ -145,7 +145,7 @@ input.right {
 	   <label for="Generation">Generation:</label>
 	  </td>
 	  <td>
-	   <input class="form-control" type="text" name="Generation" id="Generation" style="width: 50%;"> <br>
+	   <input type="text" name="Generation" id="Generation" style="width: 50%;"> <br>
 	  </td>
 	 </tr>
 	 <tr>
@@ -153,7 +153,10 @@ input.right {
 	   <label for="os">Operating System:</label><br>
 	  </td>
 	  <td>
-	   <input type="radio" name="os" value="Windows">Windows<br>
+	   <input type="radio" name="os" value="Windows 7">Windows 7<br>
+	   <input type="radio" name="os" value="Windows 8">Windows 8<br>
+	   <input type="radio" name="os" value="Windows 10">Windows 10<br>
+	   <input type="radio" name="os" value="Windows 11">Windows 11<br>
 	   <input type="radio" name="os" value="Ubuntu">Ubuntu<br>
 	   <input type="radio" name="os" value="MacOS">MacOS<br>
 	  </td>
@@ -163,7 +166,7 @@ input.right {
 		 <label for="OSKey">OS Key:</label>
 		</td>
 		<td>
-		 <input class="form-control" type="text" name="OSKey" id="OSKey" style="width: 50%;"> <br>
+		 <input type="text" name="OSKey" id="OSKey" style="width: 50%;"> <br>
 		</td>
 	   </tr>
 	   <tr>
@@ -171,7 +174,7 @@ input.right {
 		 <label for="Hostname">Hostname: </label>
 		</td>
 		<td>
-		 <input class="form-control" type="text" id="Hostname" name="Hostname" style="width: 50%;"> <br>
+		 <input type="text" id="Hostname" name="Hostname" style="width: 50%;"> <br>
 		</td>
 	   </tr>
 	 <tr>
@@ -197,7 +200,7 @@ input.right {
 	   <input type="radio" id="Storage" name="Storage" value="256 GB SSD">256 GB SSD<br>
 	   <input type="radio" id="Storage" name="Storage" value="512 GB SSD">512 GB SSD<br>
 	   <input type="radio" id="Storage" name="Storage" value="1 TB SSD">1 TB SSD<br>
-	   <input type="radio" id="Storage" name="Storage" value="Other"><input class="form-control" type="text" placeholder="Other" style="width: 50%;">Other<br>
+	   <input type="radio" id="Storage" name="Storage"><input type="text" placeholder="Other" style="width: 50%;"><br>
 	  </td>
 	 </tr>
 	 <tr>
@@ -208,7 +211,7 @@ input.right {
 	   <input type="radio" id="Graphics" name="Graphics" value="4GB">4GB<br>
 	   <input type="radio" id="Graphics" name="Graphics" value="2GB">2GB<br>
 	   <input type="radio" id="Graphics" name="Graphics" value="NA">NA<br>
-	   <input type="radio" id="Graphics" name="Graphics" value="Other"><input class="form-control" type="text" placeholder="Other" style="width: 50%;">Other<br>
+	   <input type="radio" id="Graphics" name="Graphics"><input type="text" placeholder="Other" style="width: 50%;"><br>
 	  </td>
 	 </tr>
 	 <tr>
@@ -216,7 +219,7 @@ input.right {
 	   <label for="User">User:</label>
 	  </td>
 	  <td>
-	   <input class="form-control" type="text" id="User" name="User" style="width: 50%;"> <br><br>
+	   <input type="text" id="User" name="User" style="width: 50%;"> <br><br>
 	  </td>
 	 </tr>
 	 <tr>
@@ -233,7 +236,7 @@ input.right {
 	   <label for="Remarks">Remarks:</label>
 	  </td>
 	  <td>
-	   <input class="form-control" type="text" id="Remarks" name="Remarks" style="width: 50%;"> <br><br>
+	   <input type="text" id="Remarks" name="Remarks" style="width: 50%;"> <br><br>
 	  </td>
 	 </tr>
 	 <tr>
@@ -241,12 +244,12 @@ input.right {
 		 <label for="Updatedby">Updated by:</label>
 		</td>
 		<td>
-		 <input class="form-control" type="text" id="Updatedby" name="Updatedby" style="width: 50%;"> <br>
+		 <input type="text" id="Updatedby" name="Updatedby" style="width: 50%;"> <br>
 		</td>
 	   </tr>
 	 <tr>
 	  <td>
-	   <input class="form-control right" type="submit" value="Submit" style="width: 50%;" onclick="msg()">
+	   <input class="right" type="submit" value="Submit" style="width: 50%;" onclick="msg()">
 	  </td>
 	 </tr>
 	<table>

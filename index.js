@@ -55,11 +55,6 @@ app.post('/signup',async(req,res)=>{
 
 //home
 const homeController = require('./controller/index');  //index page
-
-//Desktop
-
-const newDesktopController = require('./controller/newDesktop')   // new Desktop js
-const storeDesktopController = require('./controller/storeDesktop')
 // const searchDesktopController = require('./controller/searchDesktop')
 // const fetchController= require('./controller/searchdb');
 // const fetchControllerSerialNumber= require('./controller/searchdbserialno');
@@ -80,14 +75,18 @@ const storeDesktopController = require('./controller/storeDesktop')
 //         console.log(error.message);
 //     }
 // }
-app.get('/logout',(req,res)=>{
-    req.session.destroy(function (err) {
-      res.redirect('/'); //Inside a callback… bulletproof!
-     });
-  })
+// app.get('/logout',(req,res)=>{
+//     req.session.destroy(function (err) {
+//       res.redirect('/'); //Inside a callback… bulletproof!
+//      });
+//   })
 // app.get('/logout',userLogout);
+//Desktop
+
+const newDesktopController = require('./controller/newDesktop')   // new Desktop js
+const storeDesktopController = require('./controller/storeDesktop')
 app.get('/home',homeController);
-app.get('/Desktop',newDesktopController)   // register ejs page
+app.get('/Desktop',newDesktopController)
 app.post('/Desktop/register',storeDesktopController)
 // app.get('/search.ejs',searchDesktopController)
 // app.post('/Desktop/fetch',fetchController);

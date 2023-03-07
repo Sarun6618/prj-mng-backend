@@ -56,8 +56,7 @@ const DesktopSchema=new Schema({
     },
     User:{
         type:String,
-        required:true,
-        unique:true
+        required:true
     },
     Status:{
         type:String,

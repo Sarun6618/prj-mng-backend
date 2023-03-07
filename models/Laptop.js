@@ -54,10 +54,13 @@ const LaptopSchema=new Schema({
         type:String,
         required:true
     },
+    Charger:{
+        type:String,
+        required:true
+    },
     User:{
         type:String,
-        required:true,
-        unique:true
+        required:true
     },
     Status:{
         type:String,
